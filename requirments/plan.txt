@@ -1,0 +1,55 @@
+# Technologies
+-------------------
+ - Python 3.9.6
+ - Django 3.2.5
+ - PostgreSQL 13.3
+ - Django Channels (For RealTime Notifications)
+ - Bootstrap 5
+ - JavaScript
+ - Jquery 3.6.0
+ - HTML 5
+ - CSS 3
+
+## Panels
+-------------
+# Admin Panel
+ - Use authentication
+ - Manage All Frontend Website Content
+ - Add/Edit/Delete Services
+ - Add/Edit/Delete Trainer
+ - Add/Edit/Delete Subscribers
+ - Add/Edit/Delete Notifications
+ - Assign/Remove Subscriber to Trainer
+ - Send/Receive email/message to Subscriber or Trainer
+ - Manage Salary of Trainer
+ - Manage Payments of Subscribers
+ - Settings
+  - Change Logo
+
+# Website (Frontend) Panel
+-------------------
+ - Home Page
+  - Banner Slider
+  - Services
+  - Enquiry Form
+ - About Us Page
+ - Contact Us Page
+ - Pricing Page
+ - FAQ Page
+
+# Trainer Panel (Website)
+-------------------
+ - User authentication
+ - View Notifications (Mark Read)
+ - Send/Receive email/message to Admin or Subscriber
+ - Payments
+ - Manage Subscribers (Only View)
+ - Send report to the admin about any subscriber
+
+# Subscriber Panel (Website)
+-------------------
+ - User authentication
+ - View Notifications (Mark Read)
+ - Send/Receive email/message to Admin or Trainer
+ - Make Payments
+ - Send report to the admin about any trainer 

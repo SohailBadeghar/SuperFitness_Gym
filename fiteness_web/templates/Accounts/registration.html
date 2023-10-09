@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+
+</head>
+<body>
+   {% if messages %}
+        {% for msg in messages %}
+            <div class="alert alert-info "> 
+            <small {% if msg.tags %}Class="{{ msg.tags }}" {% endif %}> <p>{{msg}}</p></small>
+            </div>
+        {% endfor %}
+        {% endif %} <br> <br>
+    <div id="container">
+       <header>Superfitness Registration</header>
+       <form method="post">
+         {% csrf_token %}
+         <fieldset>
+             <br/>
+             {% csrf_token %}
+                    {% if forms.non_field_errors %}
+                        {% for error in forms.non_field_errors %}
+                        {% endfor %}
+                    {% endif %}
+                    {% for fm in forms %}
+                        {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}
+                        <p>{{error}}</p>
+                    {% endfor %}
+             <input type="submit" name="submit"  value="SignUp">
+             <p>Already have an Account : </p>
+             <a href="{% url 'login' %}"> <b style="color:rgb(255, 217, 0);font-size: large;">Login</b></a>
+
+          </fieldset>
+
+       </form>
+       
+
+
+    </div>
+ </body>
+</html>

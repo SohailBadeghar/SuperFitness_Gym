@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+        <!-- <style>
+    #container {
+    background: rgba(3, 3, 55, 0.5);
+    width: 18.75rem;
+    height: 19rem;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+    </style> -->
+    </head>
+    <body>
+
+        <div id="container">
+            <header>Superfitness Login</header>
+            <br>
+            <br>
+            <form method="post">
+                {% csrf_token %}
+                <fieldset>
+                    <input type="email" name="username" placeholder="Email"
+                        required>
+                    <br /><br />
+                    <input type="password" name="password"
+                        placeholder="Password" required>
+                    <br /><br /> <br>
+                    <label for="submit"></label>
+                    <input type="submit" name="submit" value="Sign In">
+                    <p>If you don't have an account yet, you can create one by
+                        clicking the link below:</p>
+                    <a href="{% url 'registration' %}"> <b
+                            style="color:rgb(255, 217, 0);">Create New Account ?</b></a>
+                    <br><br>
+                    <a href="{% url 'forget_Password' %}"> <b
+                            style="color:rgb(255, 217, 0);">Forget password ?</b></a>
+
+                </fieldset>
+
+            </form>
+        </div>
+    </body>
+</html>
